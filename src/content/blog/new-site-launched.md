@@ -1,41 +1,41 @@
 ---
-title: New Site Launched
+title: ¡Lanzamos Nuestro Nuevo Sitio Web!
 slug: new-site-launched
-image: src/assets/images/pexels-thirdman-8942612.webp
-imageAlt: image of cat
-excerpt: Announcing the launch of our new cat shelter website.
-publishDate: 2024-01-21
+image: src/assets/images/gato-blog.jpg
+imageAlt: imagen de gato en cafetería
+excerpt: ¡Descubre todo sobre Neko-Hi en nuestro nuevo sitio web!
+publishDate: 2025-04-10
 ---
 
-We are excited to announce the launch of our brand-new cat shelter website! Our new site is designed to provide you with all the information you need about our shelter, adoption process, volunteer opportunities, and more.
+¡Estamos emocionados de anunciar el lanzamiento del nuevo sitio web de **Neko-Hi**! 🐱☕  
+Ahora podrás conocer todo sobre nuestra cafetería de gatos de manera fácil y rápida.
 
-## About Our New Site
+## Sobre Nuestro Nuevo Sitio
 
-Our new website is user-friendly and packed with features to help you navigate through our services with ease. Whether you're looking to adopt a cat, volunteer, or make a donation, our site has all the resources you need.
+Hemos diseñado un sitio web moderno y amigable para que puedas explorar todo lo que **Neko-Hi** tiene para ofrecer. Desde conocer a nuestros gatitos residentes hasta ver nuestro menú, todo está a solo un clic de distancia.
 
-## Key Features
+## Características Principales
 
-Here are some of the key features of our new site:
+Estas son algunas de las novedades que encontrarás:
 
-1. **Adoption Listings**: Browse through profiles of cats available for adoption and find your perfect match.
-2. **Volunteer Sign-Up**: Easily sign up to volunteer and make a difference in the lives of our cats.
-3. **Donation Portal**: Make secure online donations to support our shelter.
-4. **Success Stories**: Read heartwarming stories of cats who have found their forever homes.
+1. **Conoce a Nuestros Gatos**: Descubre a los adorables gatos que viven en Neko-Hi y aprende más sobre ellos.
+2. **Galería de Fotos**: Mira lo bonito que es compartir un café con gatos felices.
 
-## How to Navigate
+## ¿Cómo Navegar en el Sitio?
 
-Our new site is designed to be intuitive and easy to navigate. Here are some tips to help you get started:
+Nuestro sitio está pensado para que encuentres todo fácilmente:
 
--   **Home Page**: Get an overview of our shelter and latest news.
--   **Adopt**: View available cats and learn about our adoption process.
--   **Volunteer**: Find out how you can help and sign up to volunteer.
--   **Donate**: Make a contribution to support our mission.
--   **Blog**: Stay updated with our latest news and stories.
+- **Inicio**: Un vistazo general a lo que somos.
+- **Nuestros Gatos**: Fotos y perfiles de nuestros residentes peluditos.
+- **Menú**: Explora nuestras opciones de café, té, postres y snacks.
+- **Eventos**: Infórmate sobre actividades especiales y talleres.
+- **Blog**: Entérate de novedades y consejos para amantes de los gatos.
 
-## Join Us
+## ¡Conéctate con Nosotros!
 
-We invite you to explore our new website and join us in our mission to help cats in need. Whether you're looking to adopt, volunteer, or donate, our new site makes it easier than ever to get involved.
+Te invitamos a visitar nuestro nuevo sitio y ser parte de la familia **Neko-Hi**.  
+Ya sea que quieras tomar un café rodeado de gatos, asistir a un evento o simplemente relajarte, ¡nuestro nuevo portal hace que sea muy fácil planear tu próxima visita!
 
-Thank you for your continued support. Together, we can make a difference, one paw at a time.
+Gracias por ser parte de esta aventura. 🐾  
+¡Explora el nuevo sitio web de Neko-Hi y ven a vivir la experiencia única que hemos creado para ti!
 
-Visit our new site today and see all the exciting updates!

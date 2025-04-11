@@ -13,28 +13,28 @@ import Heading from "~/components/Heading.astro";
 import CatNameGenerator from "~/components/CatNameGenerator.astro";
 
 // Images
-import CatBackground from "~/assets/images/pexels-thirdman-8942612.webp";
-import CatOne from "~/assets/images/pexels-chevonrossouw-2558605.jpg";
-import CatTwo from "~/assets/images/pexels-minan1398-1003994.jpg";
+import CatBackground from "~/assets/images/portada.png";
+import CatOne from "~/assets/images/cat1.png";
+import CatTwo from "~/assets/images/portada.png";
 
 // Faq
 const faq = [
 	{
-		question: "What is the adoption process?",
-		answer: "The adoption process is simple. You can view our available pets on our website. If you see a pet you are interested in, you can contact us to schedule a meet and greet. If you decide to adopt the pet, you will need to fill out an adoption application and pay the adoption fee. Once the adoption is complete, you can take your new pet home!",
+		question: "¿Qué es un café de gatos?",
+		answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 	},
 	{
-		question: "What is the adoption fee?",
-		answer: "The adoption fee varies depending on the pet. The fee covers the cost of spaying/neutering, vaccinations, microchipping, and other medical expenses. The fee also helps support our shelter and the care of our animals.",
+		question: "¿Hay reglas especiales para interactuar con los gatos?",
+		answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 	},
 	{
-		question: "Can I adopt a pet if I live out of state?",
-		answer: "Yes, you can adopt a pet if you live out of state. However, you will need to come to our shelter to meet the pet and complete the adoption process. We do not ship pets, so you will need to pick up your new pet in person.",
+		question: "¿Ofrecen eventos o actividades especiales?",
+		answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 	},
-	{
-		question: "Do you have a return policy?",
-		answer: "Yes, we have a return policy. If for any reason you are unable to keep your adopted pet, you can return the pet to our shelter. We want to ensure that all of our pets find loving forever homes, so we are here to help if you need to return a pet.",
-	},
+	// {
+	// 	question: "Do you have a return policy?",
+	// 	answer: "Yes, we have a return policy. If for any reason you are unable to keep your adopted pet, you can return the pet to our shelter. We want to ensure that all of our pets find loving forever homes, so we are here to help if you need to return a pet.",
+	// },
 ];
 ---
 
@@ -50,20 +50,19 @@ const faq = [
 		<div class="bg-gradient-to-r from-fuchsia-500/60 to-teal-500/80 absolute inset-0"></div>
 		<Container class:list={"relative z-10 h-full lg:min-h-svh lg:h-svh"}>
 			<div class="flex items-center h-full">
-				<div class="ml-auto">
-					<div class="prose prose-xl prose-invert text-white lg:text-right text-balance">
-						<h1 class="text-5xl lg:text-8xl mb-0">Welcome to our pet shelter!</h1>
-						<p>
-							We have a variety of pets available for adoption. Please take a look at our available pets
-							and contact us if you are interested in adopting one. We are always looking for loving homes
-							for our pets. Thank you for considering adoption!
-						</p>
-
-						<div class="not-prose mt-8">
-							<Button url="/cats" color="white"> Adopt now! </Button>
-						</div>
+				<div>
+					<div class="prose prose-xl prose-invert text-white text-left text-balance">
+					  <h1 class="text-5xl lg:text-8xl mb-0">Bienvenidos a Neko-hi</h1>
+					  <p>
+						Neko-hi Café es el lugar ideal para relajarte con una rica taza de café mientras disfrutas de la compañía de nuestros adorables gatos. Un ambiente acogedor donde puedes desconectar y pasar un rato único rodeado de felinos. ¡Te esperamos!
+					  </p>
+				  
+					  <div class="not-prose mt-8">
+						<Button href="tel:33263212137" color="white"> Contáctanos </Button>
+					  </div>
 					</div>
-				</div>
+				  </div>
+				  
 			</div>
 		</Container>
 	</Section>
@@ -72,11 +71,9 @@ const faq = [
 		<Container>
 			<Hero>
 				<div slot="hero-content-left" class="prose">
-					<h2 class="h2 text-teal-500">Adopt a pet today!</h2>
+					<h2 class="h2 text-teal-500">Calidad y Experencia Inigualables</h2>
 					<p class="leading-loose">
-						We have a variety of pets available for adoption. Please take a look at our available pets and
-						contact us if you are interested in adopting one. We are always looking for loving homes for our
-						pets. Thank you for considering adoption!
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 					</p>
 
 					<div class="not-prose mt-16">
@@ -113,7 +110,7 @@ const faq = [
 				</p>
 			</Heading>
 
-			<ShowCats cats={["reckoning", "chairman-meow", "pawdre-hepburn"]} />
+			<ShowCats cats={["reckoning", "Licenciado", "pawdre-hepburn"]} />
 		</Container>
 	</Section>
 
@@ -121,7 +118,7 @@ const faq = [
 		<Container>
 			<Hero invert>
 				<div slot="hero-content-left" class="prose">
-					<h2 class="h2 text-fuchsia-500">FAQ</h2>
+					<h2 class="h2 text-fuchsia-500">Preguntas frecuentes</h2>
 					<Faq items={faq} color="fuchsia" />
 				</div>
 				<div slot="hero-content-right" class="rotate-1">

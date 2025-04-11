@@ -1,37 +1,55 @@
 ---
-title: New Arrival - Meet Luna!
+title: Un Café para Amantes de los Gatos
 slug: new-arrival-luna
-image: src/assets/images/pexels-minan1398-1003994.jpg
-imageAlt: image of cat
-excerpt: Introducing Luna, our newest resident at the shelter.
-publishDate: 2024-01-21
+image: src/assets/images/cafe-blog.jpg
+imageAlt: imagen de gato en cafetería
+excerpt: Descubre Neko-Hi, el lugar perfecto para disfrutar café en compañía de adorables gatos.
+publishDate: 2025-04-10
 ---
 
-We're excited to introduce Luna, the newest resident at our cat shelter! Luna is a beautiful and affectionate cat who has quickly won the hearts of our staff and volunteers.
+En **Neko-Hi** combinamos dos de las mejores cosas del mundo: ¡café y gatos! 🐱☕
 
-## About Luna
+Somos una cafetería única donde puedes relajarte, disfrutar de un delicioso café y pasar tiempo en compañía de nuestros adorables gatitos.
 
-Luna is a two-year-old domestic shorthair with striking green eyes and a sleek black coat. She was found as a stray and brought to our shelter by a kind-hearted individual. Despite her rough start, Luna is incredibly friendly and loves to be around people.
+## ¿Qué es Neko-Hi?
 
-## Luna's Journey
+**Neko-Hi** es más que un café tradicional. Es un espacio diseñado para amantes de los gatos, donde puedes convivir con ellos mientras disfrutas de una bebida caliente, un postre casero o simplemente un momento de tranquilidad.
 
-When Luna first arrived, she was a bit shy and unsure of her surroundings. With patience and care from our dedicated team, she has blossomed into a confident and playful cat. Luna enjoys lounging in sunny spots, chasing feather toys, and getting gentle head scratches.
+Nuestro objetivo es crear un ambiente acogedor y lleno de buenas vibras, donde tanto humanos como gatos se sientan cómodos y felices.
 
-## Ready for Adoption
+## ¿Qué Puedes Encontrar en Neko-Hi?
 
-Luna is now ready to find her forever home. She would do well in a calm and loving environment where she can continue to thrive. If you're looking for a loyal and loving companion, Luna might be the perfect match for you.
+- ☕ **Bebidas Artesanales**: Café, tés, matcha, chocolate caliente y más, preparados con ingredientes de alta calidad.
+- 🍰 **Snacks y Postres**: Pasteles, galletas y bocadillos pensados para acompañar tu bebida favorita.
+- 🐾 **Zona de Gatos**: Un área especial donde nuestros gatitos descansan, juegan y te acompañan mientras disfrutas tu visita.
+- 📚 **Espacios de Relajación**: Áreas para leer, trabajar o simplemente desconectar un rato del ajetreo diario.
 
-## How to Adopt Luna
+## Reglas para Convivir con Nuestros Gatos
 
-If you're interested in adopting Luna, please visit our shelter to meet her in person. Our adoption process includes:
-1. **Visit the Shelter**: Spend some time with Luna and see if she's the right fit for your family.
-2. **Application**: Complete an adoption application to help us understand your needs and preferences.
-3. **Interview**: Participate in a brief interview to ensure a good match.
-4. **Home Visit**: A home visit may be required to ensure a safe environment for Luna.
-5. **Adoption Fee**: Pay the adoption fee, which helps cover the cost of Luna's care and medical expenses.
+Para asegurar el bienestar de todos, te pedimos:
+- No levantar o forzar a los gatos.
+- No alimentar a los gatos con comida humana.
+- Respetar su espacio si están durmiendo.
+- Usar juguetes disponibles para interactuar con ellos.
 
-## Support Luna and Other Cats
+## Horarios y Reservaciones
 
-Your support helps us provide the best care for Luna and other cats at our shelter. Consider making a donation or volunteering your time to make a difference in the lives of these wonderful animals.
+**Horario:**  
+Lunes a Domingo: **10:00 a.m. - 8:00 p.m.**
 
-Thank you for helping us give Luna and other cats a second chance at a happy life. Together, we can make a difference, one paw at a time.
+**Reservaciones:**  
+No es obligatorio reservar, pero si quieres asegurar tu lugar en horarios pico, te recomendamos hacerlo a través de nuestro sitio web o redes sociales.
+
+## Eventos Especiales
+
+En **Neko-Hi** también organizamos:
+- **Tardes de lectura** 📖
+- **Noches de juegos de mesa** 🎲
+- **Sesiones de adopción responsable** 🏡
+
+¡Síguenos en redes para enterarte de nuestros próximos eventos!
+
+---
+
+Ven a vivir la experiencia única de **Neko-Hi**: café, gatos y mucha felicidad en un solo lugar.  
+¡Te esperamos! 🐾
