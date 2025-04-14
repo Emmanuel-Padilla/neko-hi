@@ -2,7 +2,7 @@
 export const siteLang = "en-US";
 export const siteCurrency = "USD";
 export const siteDomain = "pawstronaut.com";
-export const siteName = "Pawstronaut";
+export const siteName = "Neko-hi";
 export const siteSlogan = "EL MEJOR CAFÉ DE GATOS EN GUADALAJARA";
 export const themeColor = "#FF0000";
 
@@ -26,7 +26,7 @@ export const address = {
 
 export const socialMedia = {
 	facebook: {
-		url: "https://facebook.com",
+		url: "https://www.facebook.com/Nekohicafe",
 		label: "Facebook",
 		icon: "facebook",
 	},
@@ -36,7 +36,7 @@ export const socialMedia = {
 		icon: "x",
 	},
 	instagram: {
-		url: "https://instagram.com",
+		url: "https://www.instagram.com/nekohi_cafe/?hl=es",
 		label: "Instagram",
 		icon: "instagram",
 	},
@@ -48,11 +48,11 @@ export const socialMedia = {
 };
 
 export const hours = {
-	monday: "9:00 - 17:00",
-	tuesday: "9:00 - 17:00",
-	wednesday: "9:00 - 17:00",
-	thursday: "9:00 - 17:00",
-	friday: "9:00 - 17:00",
-	saturday: "9:00 - 17:00",
-	sunday: "Closed",
+	monday: "Closed",
+	tuesday: " 11 a.m. - 8:30 p.m.",
+	wednesday: " 11 a.m. - 8:30 p.m.",
+	thursday: " 11 a.m. - 8:30 p.m.",
+	friday: " 11 a.m. - 8:30 p.m.",
+	saturday: " 11 a.m. - 8:30 p.m.",
+	sunday: "11 a.m. - 7 p.m.",
 };
