@@ -1,0 +1,32 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Container from "~/components/Container.astro";
+import Heading from "~/components/Heading.astro";
+import Members from "~/components/Members.astro";
+import Article from "~/components/Article.astro";
+import galery from "~/styles/galery.scss"
+import Gallery from "~/components/Gallery.astro";
+---
+
+<Layout>
+	
+    
+	
+	<Section class:list={'bg-white'}>
+		<Container>
+			<Article>
+				<h2 class="font-bold text-teal-500 h3" data-translate="GALERIA_TT">Nuestra Historia</h2>
+				<p data-translate="GALERIA_STT">
+					Neko-Hi nació en 2020 con el sueño de crear un espacio donde las personas pudieran relajarse y conectarse con los gatos en un entorno acogedor. Inspirados por los cafés de gatos japoneses, comenzamos como un pequeño local y hemos ido creciendo gracias al cariño de nuestra comunidad. Desde el primer día, nuestro compromiso ha sido ofrecer una experiencia inolvidable para amantes de los gatos y del buen café.
+					
+					
+					
+					
+					
+				</p>
+				<Gallery/>
+			</Article>
+		</Container>
+	</Section>
+</Layout>

@@ -11,40 +11,42 @@ import Article from "~/components/Article.astro";
 	<Section class:list={'bg-white'}>
 		<Container>
 			<Heading>
-				<h1 slot="heading-title" class="font-black text-teal-500 h2">Sobre Nosotros</h1>
-				<p slot="heading-content">
+				<h1 slot="heading-title" class="font-black text-teal-500 h2" data-translate="SOBRE_NOSOTROS">Sobre Nosotros</h1>
+				<p slot="heading-content" data-translate="SOBRE_NOSOTROS_DESC">
 					En Neko-Hi, combinamos dos grandes amores: el café y los gatos. Somos una cafetería de concepto único donde puedes disfrutar de bebidas artesanales y deliciosos postres mientras convives con gatos adorables. Nuestro espacio está diseñado para ofrecer un ambiente relajado tanto para nuestros visitantes como para nuestros amigos felinos.
 				</p>
 			</Heading>
 
-			<Members />
+			<!-- <Members /> -->
 		</Container>
 	</Section>
+	<Container class:list={"relative z-10"}>
+		<!-- <CallToAction
+			title="Contact us today to adopt a cat"
+			link={{ title: "Adopt", url: "/cats", color: "white" }}
+		/> -->
+	</Container>
 
 	<Section class:list={'bg-white'}>
 		<Container>
 			<Article>
-				<h2 class="font-bold text-teal-500 h3">Nuestra Historia</h2>
-				<p>
+				<h2 class="font-bold text-teal-500 h3" data-translate="SOBRE_NOSOTROS_TT1">Nuestra Historia</h2>
+				<p data-translate="SOBRE_NOSOTROS_STT1">
 					Neko-Hi nació en 2020 con el sueño de crear un espacio donde las personas pudieran relajarse y conectarse con los gatos en un entorno acogedor. Inspirados por los cafés de gatos japoneses, comenzamos como un pequeño local y hemos ido creciendo gracias al cariño de nuestra comunidad. Desde el primer día, nuestro compromiso ha sido ofrecer una experiencia inolvidable para amantes de los gatos y del buen café.
 				</p>
-				<h2 class="font-bold text-teal-500 h3">Nuestra Misión</h2>
-				<p>
+				<h2 class="font-bold text-teal-500 h3" data-translate="SOBRE_NOSOTROS_TT2">Nuestra Misión</h2>
+				<p data-translate="SOBRE_NOSOTROS_STT2">
 					En Neko-Hi, creemos que compartir momentos con los gatos puede mejorar el bienestar emocional de las personas. Nuestra misión es proporcionar un lugar donde humanos y felinos puedan convivir en armonía. También apoyamos la adopción responsable y colaboramos con refugios locales para ayudar a encontrar hogares permanentes para gatos en situación de abandono.
 				</p>
-				<h2 class="font-bold text-teal-500 h3">Cómo Participar</h2>
-				<p>
+				<h2 class="font-bold text-teal-500 h3" data-translate="SOBRE_NOSOTROS_TT3">Cómo Participar</h2>
+				<p data-translate="SOBRE_NOSOTROS_STT3">
 					<a>Hay muchas formas de formar parte de la familia Neko-Hi:</a>
 
 					Visítanos y disfruta de una bebida rodeado de gatos.
 
 					
 
-					<a>Adopta uno de nuestros gatitos residentes.</a>
-
-					Ayúdanos recomendándonos con amigos o siguiéndonos en redes sociales.
-
-					Gracias por ser parte de este sueño donde el café y los maullidos se encuentran.
+					
 				</p>
 			</Article>
 		</Container>

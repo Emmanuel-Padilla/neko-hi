@@ -31,8 +31,8 @@ export const socialMedia = {
 		icon: "facebook",
 	},
 	x: {
-		url: "https://x.com",
-		label: "X",
+		url: "https://www.tiktok.com/@nekohicafe?_t=ZM-8vj3AB3Adew&_r=1",
+		label: "Tiktok",
 		icon: "x",
 	},
 	instagram: {

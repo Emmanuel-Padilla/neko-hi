@@ -11,6 +11,23 @@ const rmTrailingSlash = (path: string): string => {
 }
 
 const pathname = rmTrailingSlash(Astro.url.pathname);
+export interface button {
+  button : string
+}
+export interface laguages {
+  en: button,
+  es: button
+}
+
+const DEFAULT_LANGUAGE = 'es';
+const content:laguages = {
+  en: {
+    button: "Español",
+  },
+  es: {
+    button: "English",
+  },
+};
 ---
 
 <header x-data="{ open: false }" @keydown.window.escape="open = false">
@@ -45,6 +62,8 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 								</svg>
 							</button>
 						</div>
+						
+						
 						<div class="max-lg:hidden absolute w-full inset-x-0">
 							<div class="flex gap-x-12 justify-end xl:justify-center items-center">
 								{
@@ -58,14 +77,35 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 									))
 								}
 							</div>
+							
+							
 						</div>
+						
+						
 						<div class="relative z-10 flex items-center gap-x-4 max-xl:hidden">
 							<SocialMediaIcons />
+							<div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+								<a
+								  id="language-toggle"
+								  class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
+									after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
+									hover:after:opacity-100 hover:after:scale-[2.5] flez justify-center w-full sm:w-max dark:text-white hover:text-gray-200`}
+								>
+								  <span class={`relative  z-10`} set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
+								</a>
+					
+							</div>
 						</div>
+						
+						
 					</nav>
 				</div>
 			</div>
+			
 		</div>
+		
+		
+		
 		<div class="lg:hidden" x-ref="dialog" x-show="open" x-cloak aria-modal="true">
 			<div
 				class="fixed inset-0 z-50 w-full overflow-y-auto bg-white/80 backdrop-blur-sm px-12 py-8"
@@ -107,6 +147,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 									>
 										{item.name}
 									</a>
+									
 								))
 							}
 						</div>
@@ -127,3 +168,87 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 		window.addEventListener("resize", setHeaderHeight);
 	});
 </script>
+<script>
+    
+	import { setLanguage, translate } from "../js/translate";
+	
+	const DEFAULT_LANGUAGE = 'es';
+	const content:any = {
+	  en: {
+		button: "Español",
+	  },
+	  es: {
+		button: "English",
+	  },
+	  
+	};
+	
+	const languageToggle = document.getElementById("language-toggle");
+	const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
+	
+	const renderButton = () => {
+	  const languageToggle = document.getElementById("language-toggle");
+	//   console.log("languaje toggle",languageToggle);
+	  
+	  const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
+	  if(languageToggle){
+		languageToggle!.addEventListener("click", (event) => {
+		//   console.log("ejecutando");
+		  
+		  event.preventDefault();
+		  const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
+			console.log(currentLanguage);
+		//   console.log("click button",currentLanguage, "Idioma que debe verse en el boton en el click",content[currentLanguage].button);
+		  buttonText!.textContent = content[currentLanguage].button;
+		  setLanguage(currentLanguage);
+		});
+	  }
+	}
+	renderButton()
+  
+	const handleTranslate= () =>{
+		const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
+		// console.log({currentLanguage},"Idioma que debe verse en el boton",content[currentLanguage].button);
+  
+		buttonText!.textContent = content[currentLanguage].button;
+		
+		translate(currentLanguage);
+	}
+	// // console.log("Change language boton",changeLanguageBtn, "Default",DEFAULT_LANGUAGE, "")
+  
+	window.addEventListener("load", ( )=>{
+	//   console.log("Dentro Load");
+	  
+	  renderButton();
+	  handleTranslate();
+	});
+	document.addEventListener("DOMContentLoaded", () => {
+	//   console.log("Dentro DOMContent");
+	  renderButton();
+	  handleTranslate();
+	});
+	
+	
+	document.addEventListener("astro:after-swap", () => {
+	//   console.log("Dentro astro after");
+		renderButton();
+		handleTranslate();
+	})
+  
+  </script>
+  
+  <script>
+  
+	import { setLanguage, translate } from "../js/translate.ts"
+  
+	// I don't like this, but when change page the language have to set again
+	window.addEventListener('popstate', function() {
+		// window.location.reload();
+		
+		const currentLanguage = window.localStorage.getItem("languageDefault") || 'es';
+		// console.log("execute", currentLanguage);
+		
+		translate(currentLanguage);
+	}, false);
+  
+  </script>

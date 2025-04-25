@@ -11,7 +11,7 @@ if (!cat) {
 	class="odd:rotate-1 even:-rotate-1 hover:rotate-0 transition hover:scale-105 duration-500 bg-white"
 	data-cat={JSON.stringify(cat.data)}
 >
-	<a href={`/cats/${cat.id}`} class="h-full flex flex-col">
+	<a href={`/cats/${cat.id}`} class="h-full flex flex-col" data-translate={`/cats/${cat.id}`}>
 		<Image
 			src={cat.data.image}
 			alt={cat.data.name}
@@ -20,12 +20,12 @@ if (!cat) {
 		/>
 
 		<div class="px-4 pt-8 flex flex-col grow border-x-2 border-b-2 border-gray-100 rounded-b-2xl overflow-hidden">
-			<h2 class="h5 tracking-wide" transition:name={`cat-title-${cat.id}`}>{cat.data.name}</h2>
-			<p class="mt-2 mb-8 prose" transition:name={`cat-description-${cat.id}`}>{cat.data.description}</p>
+			<h2 class="h5 tracking-wide" transition:name={`cat-title-${cat.id}`} data-translate={cat.data.name}>{cat.data.name}</h2>
+			<p class="mt-2 mb-8 prose" transition:name={`cat-description-${cat.id}`} data-translate={cat.data.description}>{cat.data.description}</p>
 			<span
 				class="text-center px-4 py-2 -mx-4 text-white text-2xl font-bold bg-gradient-to-r from-fuchsia-500 to-teal-500 mt-auto block"
-			>
-				Adopt Me
+			 data-translate="CONOCEME">
+				Conóceme
 			</span>
 		</div>
 	</a>

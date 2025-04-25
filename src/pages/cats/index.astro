@@ -13,8 +13,8 @@ const cats = await getCollection("cats");
 	<Section class:list={"background-pattern"}>
 		<Container>
 			<Heading>
-				<h1 slot="heading-title">All Our Cats</h1>
-				<p slot="heading-content">
+				<h1 slot="heading-title" data-translate="CATS_TT1">All Our Cats</h1>
+				<p slot="heading-content" data-translate="CATS_STT">
 					We have a variety of cats available for adoption. Please take a look at our available cats and
 					contact us if you are interested in adopting one. We are always looking for loving homes for our
 					cats. Thank you for considering adoption!
@@ -26,30 +26,30 @@ const cats = await getCollection("cats");
 				class="my-8 flex flex-wrap gap-x-8 gap-y-4 items-center justify-center bg-gradient-to-r from-fuchsia-100 to-teal-100 p-4 rounded-2xl"
 			>
 				<div>
-					<label for="gender">Gender</label>
+					<label for="gender" data-translate="GENERO">Gender</label>
 					<select
 						name="gender"
 						id="gender"
 						class="bg-transparent rounded-full ring-1 px-2 py-1 ring-teal-500 mt-2"
 					>
-						<option value="all" class="text-black">All</option>
-						<option value="male">Male</option>
-						<option value="female">Female</option>
+						<option value="all" class="text-black" data-translate="ALL">All</option>
+						<option value="male" data-translate="MALE">Male</option>
+						<option value="female" data-translate="FEMALE">Female</option>
 					</select>
 				</div>
 
 				<div>
-					<label for="breed">Breed</label>
+					<label for="breed" data-translate="BREED">Breed</label>
 					<select
 						name="breed"
 						id="breed"
 						class="bg-transparent rounded-full ring-1 px-2 py-1 ring-teal-500 mt-2"
 					>
-						<option value="all">All</option>
+						<option value="all" data-translate="ALL">All</option>
 					</select>
 				</div>
 
-				<div>
+				<!-- <div>
 					<label for="child-friendly">Child Friendly</label>
 					<select
 						name="child-friendly"
@@ -58,16 +58,16 @@ const cats = await getCollection("cats");
 					>
 						<option value="all">All</option>
 					</select>
-				</div>
+				</div> -->
 
 				<div>
-					<label for="sterilized">Sterilized</label>
+					<label for="sterilized" data-translate="STERILIZED">Sterilized</label>
 					<select
 						name="sterilized"
 						id="sterilized"
 						class="bg-transparent rounded-full ring-1 px-2 py-1 ring-teal-500 mt-2"
 					>
-						<option value="all">All</option>
+						<option value="all" data-translate="ALL">All</option>
 					</select>
 				</div>
 			</div>

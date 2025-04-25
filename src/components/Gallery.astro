@@ -1,0 +1,110 @@
+<div class="slider">
+    <div class="slider-track">
+        <!-- Primer conjunto de imágenes -->
+        <div class="slider-row">
+            <img src="src/assets/images/galeria/cat1.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat2.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat3.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat4.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat5.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat6.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat7.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat8.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat9.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat10.jpg" alt="Gato">
+        </div>
+        <!-- Segundo conjunto idéntico (para el efecto infinito) -->
+        <div class="slider-row">
+            <img src="src/assets/images/galeria/cat1.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat2.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat3.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat4.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat5.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat6.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat7.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat8.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat9.jpg" alt="Gato">
+            <img src="src/assets/images/galeria/cat10.jpg" alt="Gato">
+        </div>
+    </div>
+</div>
+
+<style>
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 400px; /* Altura para desktop */
+}
+
+.slider-track {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    animation: slide 12s linear infinite;
+}
+
+.slider-row {
+    display: flex;
+    height: 100%;
+    flex-shrink: 0;
+    align-items: center; /* Centra verticalmente las imágenes */
+}
+
+.slider-row img {
+    height: 90%; /* Reduce un poco la altura para dar espacio */
+    width: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra opcional */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1024px) {
+    .slider {
+        height: 350px;
+    }
+    .slider-row img {
+        height: 85%;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 300px;
+    }
+    .slider-row img {
+        height: 80%;
+        margin-right: 12px;
+    }
+    .slider-track {
+        animation-duration: 16s; /* Más lento en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 250px;
+    }
+    .slider-row img {
+        height: 75%;
+        margin-right: 10px;
+    }
+    .slider-track {
+        animation-duration: 20s; /* Más lento en móviles pequeños */
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+</style>

@@ -52,13 +52,13 @@ const faq = [
 			<div class="flex items-center h-full">
 				<div>
 					<div class="prose prose-xl prose-invert text-white text-left text-balance">
-					  <h1 class="text-5xl lg:text-8xl mb-0">Bienvenidos a Neko-hi</h1>
-					  <p>
+					  <h1 class="text-5xl lg:text-8xl mb-0" data-translate="TT_i" >Bienvenidos a Neko-hi</h1>
+					  <p data-translate="TT_1">
 						Neko-hi Café es el lugar ideal para relajarte con una rica taza de café mientras disfrutas de la compañía de nuestros adorables gatos. Un ambiente acogedor donde puedes desconectar y pasar un rato único rodeado de felinos. ¡Te esperamos!
 					  </p>
 				  
 					  <div class="not-prose mt-8">
-						<Button href="tel:33263212137" color="white"> Contáctanos </Button>
+						<Button href="tel:33263212137" color="white" data-translate="CONTACT_1"> Contáctanos </Button>
 					  </div>
 					</div>
 				  </div>
@@ -71,13 +71,13 @@ const faq = [
 		<Container>
 			<Hero>
 				<div slot="hero-content-left" class="prose">
-					<h2 class="h2 text-teal-500">Calidad y Experencia Inigualables</h2>
-					<p class="leading-loose">
+					<h2 class="h2 text-teal-500" data-translate="CALIDAD_TT">Calidad y Experencia Inigualables</h2>
+					<p class="leading-loose" data-translate="CALIDAD_STT">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 					</p>
 
 					<div class="not-prose mt-16">
-						<Button url="/cats">
+						<Button url="/cats" data-translate="CONOCE_GATOS" >
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="inline-block size-5 -mt-1 mr-1"
@@ -88,7 +88,7 @@ const faq = [
 									d="M1.777.053A.5.5 0 0 1 2.3.1l3.917 2.947a6.6 6.6 0 0 1 1.564 0L11.7.1a.5.5 0 0 1 .801.4v8.25h.748a.75.75 0 0 1 0 1.5h-.81a4.5 4.5 0 0 1-.479 1.391l1.376.688a.75.75 0 1 1-.67 1.342l-1.654-.827A4.48 4.48 0 0 1 8 14H6a4.48 4.48 0 0 1-3.011-1.156l-1.654.827a.75.75 0 1 1-.67-1.342l1.376-.688a4.5 4.5 0 0 1-.479-1.391h-.81a.75.75 0 0 1 0-1.5H1.5V.5a.5.5 0 0 1 .277-.447M9.124 7.75a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m-4.25 0a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m.897 1.605A.5.5 0 0 1 6.25 9h1.5a.5.5 0 0 1 .277.916l-.75.5a.5.5 0 0 1-.554 0l-.75-.5a.5.5 0 0 1-.202-.56Z"
 									clip-rule="evenodd"></path></svg
 							>
-							Adopt a cat
+							Conoce nuestros gatitos
 						</Button>
 					</div>
 				</div>
@@ -102,8 +102,8 @@ const faq = [
 	<Section>
 		<Container>
 			<Heading>
-				<h2 slot="heading-title" class="h2 text-teal-500">Available Cats</h2>
-				<p slot="heading-content">
+				<h2 slot="heading-title" class="h2 text-teal-500" data-translate="NUESTROS_GATITOS">Available Cats</h2>
+				<p slot="heading-content" data-translate="NUESTROS_GATITOS_DESC">
 					We have a variety of cats available for adoption. Please take a look at our available cats and
 					contact us if you are interested in adopting one. We are always looking for loving homes for our
 					cats. Thank you for considering adoption!
@@ -118,8 +118,8 @@ const faq = [
 		<Container>
 			<Hero invert>
 				<div slot="hero-content-left" class="prose">
-					<h2 class="h2 text-fuchsia-500">Preguntas frecuentes</h2>
-					<Faq items={faq} color="fuchsia" />
+					<h2 class="h2 text-fuchsia-500" data-translate="PREGUNTAS_FRECUENTES">Preguntas frecuentes</h2>
+					<Faq items={faq} color="fuchsia"/>
 				</div>
 				<div slot="hero-content-right" class="rotate-1">
 					<Image src={CatTwo} alt="Cat" class:list={"w-full h-full object-cover rounded-2xl shadow"} />
@@ -133,18 +133,18 @@ const faq = [
 		<div class="bg-gradient-to-r from-fuchsia-900/80 to-teal-900/80 absolute inset-0"></div>
 
 		<Container class:list={"relative z-10"}>
-			<CallToAction
+			<!-- <CallToAction
 				title="Contact us today to adopt a cat"
 				link={{ title: "Adopt", url: "/cats", color: "white" }}
-			/>
+			/> -->
 		</Container>
 	</Section>
 
 	<Section>
 		<Container>
 			<Heading>
-				<h2 slot="heading-title" class="h2 text-teal-500">News from our shelter</h2>
-				<p slot="heading-content">
+				<h2 slot="heading-title" class="h2 text-teal-500" data-translate="WELCOME_BLOG">News from our shelter</h2>
+				<p slot="heading-content" data-translate="WELCOME_BLOG_DESC">
 					Welcome to our blog! Here you will find the latest news and updates from our pet shelter. We are
 					passionate about helping pets find loving forever homes, and we are excited to share our stories
 					with you. Thank you for supporting our shelter!
@@ -153,7 +153,10 @@ const faq = [
 
 			<ShowBlogs posts={["hello-world", "new-arrival-luna", "new-site-launched"]} />
 		</Container>
+		
+		
 	</Section>
+	
 
 	<Section class:list={"relative"}>
 		<Image src={CatBackground} alt="Cat" class:list={"absolute inset-0 w-full h-full object-cover"} />

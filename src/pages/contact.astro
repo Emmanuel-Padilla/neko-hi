@@ -14,23 +14,24 @@ import Address from "~/components/Address.astro";
 		<Container>
 			<div class="grid grid-cols-1 gap-8 lg:gap-16 xl:gap-24 lg:grid-cols-2">
 				<div>
-					<Heading>
+					<!-- <Heading>
 						<h2 slot="heading-title" class="h2">Contact</h2>
 						<p slot="heading-content">Get in touch with us for any questions or inquiries.</p>
-					</Heading>
+					</Heading> -->
 
-					<FormContact />
+					<!-- <FormContact /> -->
+					<Map />
 				</div>
 
 				<div>
 					<Heading>
-						<h2 slot="heading-title" class="h2">Location &amp; Hours</h2>
+						<h2 slot="heading-title" class="h2" data-translate="LOCATION">Location &amp; Hours</h2>
 						<div slot="heading-content">
 							<Address />
 							<TableHours />
 						</div>
 					</Heading>
-					<Map />
+					
 				</div>
 			</div>
 		</Container>

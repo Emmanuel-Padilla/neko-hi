@@ -1,14 +1,22 @@
 export const menuMain = [
 	{
-		name: "Home",
+		name: "Inicio",
 		url: "/",
 	},
 	{
-		name: "About Us",
+		name: "Nosotros",
 		url: "/about-us",
 	},
+	// {
+	// 	name: "Videos",
+	// 	url: "/video",
+	// },
 	{
-		name: "Adopt",
+		name: "Galería",
+		url: "/galeria",
+	},
+	{
+		name: "Gatitos",
 		url: "/cats",
 	},
 	{
@@ -16,7 +24,7 @@ export const menuMain = [
 		url: "/blog",
 	},
 	{
-		name: "Contact",
+		name: "Ubicación",
 		url: "/contact",
 	},
 ];
