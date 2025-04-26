@@ -60,8 +60,11 @@ const content:laguages = {
 										stroke-linejoin="round"
 										d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
 								</svg>
+								
 							</button>
+							
 						</div>
+
 						
 						
 						<div class="max-lg:hidden absolute w-full inset-x-0">
@@ -76,6 +79,7 @@ const content:laguages = {
 										</a>
 									))
 								}
+								
 							</div>
 							
 							
@@ -133,6 +137,17 @@ const content:laguages = {
 						>
 							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
 						</svg>
+						<div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
+							<a
+							  id="language-toggle"
+							  class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
+								after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
+								hover:after:opacity-100 hover:after:scale-[2.5] flez justify-center w-full sm:w-max dark:text-white hover:text-gray-200`}
+							>
+							  <span class={`relative  z-10`} set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
+							</a>
+				
+						</div>
 					</button>
 				</div>
 				<div class="mt-6 flow-root">
