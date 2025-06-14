@@ -2,7 +2,9 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Container from "~/components/Container.astro";
+import Map from "~/components/Map.astro";
 import { Image, Picture } from "astro:assets";
+import * as AstroAssets from "astro:assets";
 import Hero from "~/components/Hero.astro";
 import Button from "~/components/Button.astro";
 import Faq from "~/components/Faq.astro";
@@ -16,38 +18,56 @@ import CatNameGenerator from "~/components/CatNameGenerator.astro";
 import CatBackground from "~/assets/images/portada.png";
 import CatOne from "~/assets/images/cat1.png";
 import CatTwo from "~/assets/images/portada.png";
+import CatThree from "~/assets/images/reglas.png";
+import CatsCelu from "~/assets/images/pets/main/celu.png";
+import CatsCompu from "~/assets/images/pets/main/compu.png";
+import Preguntas from "~/components/Preguntas.astro";
+import Address from "~/components/Address.astro";
+import TableHours from "~/components/TableHours.astro";
 
 // Faq
 const faq = [
 	{
 		question: "¿Qué es un café de gatos?",
-		answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		answer: "Es un espacio relajante y seguro en donde puedes disfrutar de un rico alimento y/o bebida mientras convives con nuestros adorables gatitos. ",
 	},
 	{
 		question: "¿Hay reglas especiales para interactuar con los gatos?",
-		answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		answer: "Sí, tenemos algunas reglas para garantizar la seguridad y el bienestar de los gatos. Por ejemplo, no está permitido levantar a los gatos sin permiso y se debe respetar su espacio personal.",
 	},
 	{
-		question: "¿Ofrecen eventos o actividades especiales?",
-		answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		question: "¿Puedo llevar a mi gato?",
+		answer: "Lamentablemente no, Neko-hi es el hogar de nuestros gatitos y los gatos suelen ser muy territoriales, llevar un gato extraño puede ser una experiencia estresante tanto para los gatitos del café como para tu gato. Es mejor que se queden en la seguridad de su hogar.",
 	},
-	// {
-	// 	question: "Do you have a return policy?",
-	// 	answer: "Yes, we have a return policy. If for any reason you are unable to keep your adopted pet, you can return the pet to our shelter. We want to ensure that all of our pets find loving forever homes, so we are here to help if you need to return a pet.",
-	// },
+	{
+		question: "¿Pueden ir niños?",
+		answer: "¡Claro! En Neko-hi no tenemos limite de edad, únicamente le pedimos a los padres o tutores que nos apoyen explicándoles las reglas a los mas peques y se aseguren de que se lleven a cabo las reglas de convivencia.",
+	},
 ];
 ---
 
 <Layout title="Home" pageTitle="Neko-hi" description="Neko Hi es un acogedor café de gatitos en Guadalajara, donde puedes disfrutar café delicioso mientras convives con adorables gatitos en un ambiente relajante.">
 	<Section class:list={"relative"}>
-		<Picture
-			src={CatBackground}
-			alt="Cat"
-			class:list={"absolute inset-0 w-full h-full object-cover"}
-			loading={"eager"}
-			fetchpriority={"high"}
-		/>
-		<div class="bg-gradient-to-r from-fuchsia-500/60 to-teal-500/80 absolute inset-0"></div>
+		<picture>
+			<source 
+				srcset={CatsCelu.src} 
+				media="(max-width: 768px)"
+				width="750"
+				height="1334"
+			/>
+			<img
+				src={CatsCompu.src}
+				alt="Gatos en Neko-hi Café"
+				class="absolute inset-0 w-full h-full object-cover"
+				loading="eager"
+				fetchpriority="high"
+				width="1920"
+				height="1080"
+			/>
+			</picture>
+		<div class="bg-gradient-to-r from-pink-300/40 via-pink-500/30 via-blue-400/30 to-blue-600/50 absolute inset-0"></div>
+
+
 		<Container class:list={"relative z-10 h-full lg:min-h-svh lg:h-svh"}>
 			<div class="flex items-center h-full">
 				<div>
@@ -57,9 +77,9 @@ const faq = [
 						Neko-hi Café es el lugar ideal para relajarte con una rica taza de café mientras disfrutas de la compañía de nuestros adorables gatos. Un ambiente acogedor donde puedes desconectar y pasar un rato único rodeado de felinos. ¡Te esperamos!
 					  </p>
 				  
-					  <div class="not-prose mt-8">
+					  <!-- <div class="not-prose mt-8">
 						<Button href="tel:33263212137" color="white" data-translate="CONTACT_1"> Contáctanos </Button>
-					  </div>
+					  </div> -->
 					</div>
 				  </div>
 				  
@@ -71,7 +91,7 @@ const faq = [
 		<Container>
 			<Hero>
 				<div slot="hero-content-left" class="prose">
-					<h2 class="h2 text-teal-500" data-translate="CALIDAD_TT">Calidad y Experencia Inigualables</h2>
+					<h2 class="text-4xl font-bold bg-gradient-to-r from-pink-200 via-pink-400 to-fuchsia-600 bg-clip-text text-transparent" data-translate="CALIDAD_TT">Calidad y Experencia Inigualables</h2>
 					<p class="leading-loose" data-translate="CALIDAD_STT">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 					</p>
@@ -98,11 +118,12 @@ const faq = [
 			</Hero>
 		</Container>
 	</Section>
+	
 
 	<Section>
 		<Container>
 			<Heading>
-				<h2 slot="heading-title" class="h2 text-teal-500" data-translate="NUESTROS_GATITOS">Available Cats</h2>
+				<h2 slot="heading-title" class="h2 text-4xl font-bold bg-gradient-to-r from-pink-200 via-pink-400 to-fuchsia-600 bg-clip-text text-transparent" data-translate="NUESTROS_GATITOS">Available Cats</h2>
 				<p slot="heading-content" data-translate="NUESTROS_GATITOS_DESC">
 					We have a variety of cats available for adoption. Please take a look at our available cats and
 					contact us if you are interested in adopting one. We are always looking for loving homes for our
@@ -110,27 +131,72 @@ const faq = [
 				</p>
 			</Heading>
 
-			<ShowCats cats={["reckoning", "Licenciado", "pawdre-hepburn"]} />
+			<ShowCats cats={["Cheto", "Finn", "Mantecado"]} />
 		</Container>
 	</Section>
+
+	<Section>
+		<Container>
+			<div class="grid grid-cols-1 gap-8 lg:gap-16 xl:gap-24 lg:grid-cols-2">
+				<div>
+					<!-- <Heading>
+						<h2 slot="heading-title" class="h2">Contact</h2>
+						<p slot="heading-content">Get in touch with us for any questions or inquiries.</p>
+					</Heading> -->
+
+					<!-- <FormContact /> -->
+					<Map />
+				</div>
+
+				<div>
+					<Heading>
+						<h2 slot="heading-title" class="h2" data-translate="LOCATION">Location &amp; Hours</h2>
+						<div slot="heading-content">
+							<Address />
+							<TableHours />
+						</div>
+					</Heading>
+					
+				</div>
+			</div>
+		</Container>
+	</Section>
+	
 
 	<Section class:list={"bg-white"}>
 		<Container>
 			<Hero invert>
 				<div slot="hero-content-left" class="prose">
-					<h2 class="h2 text-fuchsia-500" data-translate="PREGUNTAS_FRECUENTES">Preguntas frecuentes</h2>
+					<h2 class="h2 text-pink-300" data-translate="PREGUNTAS_FRECUENTES">Preguntas frecuentes</h2>
 					<Faq items={faq} color="fuchsia"/>
 				</div>
 				<div slot="hero-content-right" class="rotate-1">
-					<Image src={CatTwo} alt="Cat" class:list={"w-full h-full object-cover rounded-2xl shadow"} />
+					<Image src={CatThree} alt="Cat" class:list={"w-full h-full object-cover rounded-2xl shadow"} />
 				</div>
 			</Hero>
 		</Container>
 	</Section>
+	<!-- <Section class:list={"bg-white"}>
+		<Container>
+			<Hero>
+				<div slot="hero-content-left" class="prose">
+					<h3 class="h2 text-teal-500" data-translate="REGLAS">Calidad y Experencia Inigualables</h3>
+					<p >
+						<Preguntas />
+					</p>
+
+					
+				</div>
+				<div slot="hero-content-right" class="-rotate-1">
+					<Image src={CatOne} alt="Cat" class:list={"w-full h-full object-cover rounded-2xl shadow"} />
+				</div>
+			</Hero>
+		</Container>
+	</Section> -->
 
 	<Section class:list={"relative"}>
 		<Image src={CatBackground} alt="Cat" class:list={"absolute inset-0 w-full h-full object-cover"} />
-		<div class="bg-gradient-to-r from-fuchsia-900/80 to-teal-900/80 absolute inset-0"></div>
+		<div class="bg-gradient-to-r from-pink-300 to-teal-900/80 absolute inset-0"></div>
 
 		<Container class:list={"relative z-10"}>
 			<!-- <CallToAction
@@ -143,7 +209,7 @@ const faq = [
 	<Section>
 		<Container>
 			<Heading>
-				<h2 slot="heading-title" class="h2 text-teal-500" data-translate="WELCOME_BLOG">News from our shelter</h2>
+				<h2 slot="heading-title" class="h2text-4xl font-bold bg-gradient-to-r from-pink-200 via-pink-400 to-fuchsia-600 bg-clip-text text-transparent" data-translate="WELCOME_BLOG">News from our shelter</h2>
 				<p slot="heading-content" data-translate="WELCOME_BLOG_DESC">
 					Welcome to our blog! Here you will find the latest news and updates from our pet shelter. We are
 					passionate about helping pets find loving forever homes, and we are excited to share our stories
@@ -151,19 +217,19 @@ const faq = [
 				</p>
 			</Heading>
 
-			<ShowBlogs posts={["hello-world", "new-arrival-luna", "new-site-launched"]} />
+			<ShowBlogs posts={["bienvenidos-neko-hi", "cafe-gatos-gdl", "neko-hi-web-page", "concurso-dibujo"]} />
 		</Container>
 		
 		
 	</Section>
 	
 
-	<Section class:list={"relative"}>
+	<!-- <Section class:list={"relative"}>
 		<Image src={CatBackground} alt="Cat" class:list={"absolute inset-0 w-full h-full object-cover"} />
-		<div class="bg-gradient-to-r from-fuchsia-900/80 to-teal-900/80 absolute inset-0"></div>
+		<div class="bg-gradient-to-r from-pink-300 to-teal-900/80 absolute inset-0"></div>
 
 		<Container class:list={"relative z-10"}>
 			<CatNameGenerator title="Help me name my new cat!" />
 		</Container>
-	</Section>
+	</Section> -->
 </Layout>

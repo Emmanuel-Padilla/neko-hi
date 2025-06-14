@@ -1,0 +1,119 @@
+---
+import plates from "src/utils/data/plates/caliente.json";
+import Layout from "../layouts/Layout.astro";''
+---
+<Layout title="Welcome to the Agency Coffee Hour">
+    <br /><br /><br /><br /><br />
+
+  <section id="menu-cafeteria" class="relative">
+    
+
+    <!-- Navegación por categorías -->
+    <div class="mb-10 sticky top-20 z-10">
+        <nav class="bg-gray-300 dark:bg-gray-600 text-white w-full px-2 sm:px-4 md:px-0 swiper-plates">
+          <ul class="px-2 py-2 md:px-4 md:py-3 swiper-wrapper flex space-x-3 md:space-x-8 overflow-x-auto scrollbar-hide w-full justify-start md:justify-center">
+            {plates.map((plate: any) => (
+            <li class="swiper-slide !w-max">
+              <a href={`#${plate.slug}`} class="btn-tertiary whitespace-nowrap transition-colors duration-300 hover:text-secondary focus:ring-2 focus:ring-offset-2">
+                <br /> <br />
+                <span class=" text-black" data-translate={plate.prettyName}>{plate.prettyName}</span>
+                
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Secciones por categoría -->
+    <div class="grid grid-cols-1 gap-y-32">
+      {plates.map((plate: any) => (
+        <div id={plate.slug} class="space-y-16 scroll-mt-24 md:scroll-mt-20">
+          <div class="flex flex-col items-center gap-2 max-w-lg mx-auto text-center">
+            <h3 class="text-brand-green/70 text-3xl md:text-4xl font-bold " data-translate={plate.prettyName}>{plate.prettyName}</h3>
+            <p class=" text-sm md:text-base" data-translate={plate.description}>{plate.description}</p>
+          </div>
+
+          <dl class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-x-16 xl:gap-x-32">
+              {plate.plates.map((item: any) => (
+                <div class="plate-item p-4 md:p-6 rounded-xl transition-all duration-500 hover:scale-105 hover:shadow-lg">
+                  <dt>
+                    <div class="flex justify-between items-center">
+                      <span class="font-bold text-lg md:text-2xl tracking-wide  whitespace-normal" data-translate={item.name}>{item.name}</span>
+                      <div class="text-right">
+                        <>
+                        {item.priceGrande != null && (
+                            <div class="text-sm md:text-base text-black ">
+                            Grande: {new Intl.NumberFormat('es-MX', {
+                                style: "currency",
+                                currency: 'MXN',
+                            }).format(item.priceGrande)}
+                            </div>
+                        )}
+
+                        {item.priceChico != null && (
+                            <div class="text-sm md:text-base text-black ">
+                            Chico: {new Intl.NumberFormat('es-MX', {
+                                style: "currency",
+                                currency: 'MXN',
+                            }).format(item.priceChico)}
+                            </div>
+                        )}
+
+                        {item.priceGrande == null && item.priceChico == null && (
+                            <span class="font-medium text-base md:text-lg ">
+                            {new Intl.NumberFormat('es-MX', {
+                                style: "currency",
+                                currency: 'MXN',
+                            }).format(item.price)}
+                            </span>
+                        )}
+                        </>
+
+                        </div>
+
+                    </div>
+                  </dt>
+                  <dd>
+                    <p class="mt-2 text-black  tracking-wide leading-normal text-sm md:text-base" data-translate={item.description}>{item.description}</p>
+                  </dd>
+                </div>
+              ))}
+            </div>
+          </dl>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative; /* o absolute/fixed, según tu necesidad */
+    z-index: 9999;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+
+<script>
+	import Swiper from "swiper";
+	import "swiper/css";
+
+	document.addEventListener("astro:page-load", () => {
+		const swiperPlates = document.querySelector<HTMLElement>(".swiper-plates");
+		if (swiperPlates) {
+			new Swiper(swiperPlates, {
+				loop: false,
+				spaceBetween: 32,
+				slidesPerView: "auto",
+			});
+		}
+	});
+</script>

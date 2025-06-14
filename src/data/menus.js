@@ -1,16 +1,21 @@
+// import { getPermalink, getAsset } from './utils/permalinks';
 export const menuMain = [
 	{
 		name: "Inicio",
 		url: "/",
 	},
 	{
+		name: "Menú",
+		url: "/bebidas-c",
+	},
+	{
 		name: "Nosotros",
 		url: "/about-us",
 	},
-	// {
-	// 	name: "Videos",
-	// 	url: "/video",
-	// },
+	{
+		name: "Videos",
+		url: "/videos",
+	},
 	{
 		name: "Galería",
 		url: "/galeria",
@@ -23,8 +28,8 @@ export const menuMain = [
 		name: "Blog",
 		url: "/blog",
 	},
-	{
-		name: "Ubicación",
-		url: "/contact",
-	},
+	// {
+	// 	name: "Ubicación",
+	// 	url: "/contact",
+	// },
 ];

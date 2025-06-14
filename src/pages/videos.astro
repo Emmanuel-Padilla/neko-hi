@@ -1,0 +1,98 @@
+---
+import Video from "../components/shortcodes/Videos.tsx";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+
+const videos = [
+  {
+    title: "videotitle1",
+    description: "videodes1",
+    url: "video1.mp4"
+  },
+  {
+    title: "videotitle2",
+    description: "videodes2",
+    url: "video2.mp4"
+  },
+  {
+    title: "videotitle3",
+    description: "videodes3",
+    url: "video3.mp4"
+  },
+];
+---
+
+<Layout title='Videos'>
+  <Container className="space-y-10 md:space-y-12 mb-10">
+    <div class="relative pt-36 ml-auto">
+      <div class="lg:w-2/3 text-center mx-auto mb-16"> 
+        <h1 class="text-gray-800 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">
+          Videos 
+        </h1>
+        <p class="mt-8 text-gray-700 dark:text-gray-300 text-lg" data-translate="VIDEODES">
+          Descubre cómo trabajamos a través de nuestros videos. Explora nuestros procesos, tecnologías y el compromiso que ponemos en cada etapa para garantizar resultados de calidad. Vive la experiencia de nuestro laboratorio desde adentro.
+        </p>
+      </div>
+      
+      <div class="videos-grid">
+        {videos.map((video) => (
+          <div class="card">
+            <span></span>
+            <div class="content">
+              <div>
+                <h3 data-translate={video.title}>{video.title}</h3>
+                <p data-translate={video.description}>{video.description}</p>
+                <Video client:only="react" title={video.title} src={video.url} width={500} height={500} />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+
+  <style>
+    .videos-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-items: center;
+    }
+    .card {
+      position: relative;
+      max-width: 600px;
+      border-radius: 1.2em;
+      overflow: hidden;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-20px);
+    }
+    .card span {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      border-radius: 1em;
+    }
+    .card .content {
+      position: relative;
+      padding: 1rem;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; 
+      align-items: center;
+      justify-content: center;
+    }
+    .card h3,
+    .card p {
+      color: white;
+      text-align: center;
+    }
+  </style>
+</Layout>

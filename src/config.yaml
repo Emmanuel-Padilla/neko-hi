@@ -1,22 +1,21 @@
 site:
-  name: UDigital Business
-  site: 'https://udigitalbusiness.com/'
+  name: Neko-hi
+  site: 'https://neko-hi.com/'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: 9_rjJFO4op9OmAH-IV96Iw3fF6O2yX0rb-A5TREDgdA
-
+  googleSiteVerificationId: LLdZkU_jxugT-FBsEf3xoh28VOX454pcPH11rYNyG18
 # Default SEO metadata
 metadata:
   title:
-    default: UDigital Business
-    template: '%s — Soluciones Digitales'
-  description: "UDigital Business es una empresa de soluciones digitales que ofrece servicios de diseño web, desarrollo de aplicaciones moviles y web, Marketing digital, CRM, Gestion de Redes."
+    default: Neko
+    template: '%s — El mejor café de la ciudad acompañado con gatitos'
+  description: "Es un café de especialidad, donde la calidad y el sabor son nuestra prioridad. Ven y disfruta de una experiencia única."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: UDigital Business
+    site_name: neko-hi
     images:
       # - url: '~/assets/images/default.png'
         width: 1200
@@ -66,7 +65,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: G-SXHDTTMXDW # or "G-XXXXXXXXXX"
+      id: G-THB3ZNE2CV # or "G-XXXXXXXXXX"
       partytown: false
 
 ui:

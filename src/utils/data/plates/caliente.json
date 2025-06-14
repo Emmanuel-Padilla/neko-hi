@@ -1,0 +1,262 @@
+[
+    {
+      "id": 1,
+      "slug": "Barra Fría",
+      "prettyName": "barra_fria",
+      "description": "",
+      "plates": [
+        {
+          "name": "plates_name",
+          "description": "description",
+          "price": 80
+        },
+        {
+          "name": "plates_name_1",
+          "description": "Sabor: Negro, Verde, Manzanilla, Manzana con canela y Menta",
+          "price": 70
+        },
+        {
+          "name": "plates_name_2",
+          "description": "Sencillo, Moka Blanco, Caramel, Vainilla, Taro",
+          "price": 90
+        },
+        {
+          "name": "plates_name_3",
+          "description": "Tradicional, Vainilla, Verde, Matcha (vegano)",
+          "price": 90
+        },
+        {
+          "name": "plates_name_4",
+          "description": "",
+          "price": 95
+        },
+        {
+          "name": "plates_name_5",
+          "description": "Capuccino, Moka, Moka blanco, Caramel, Vainilla",
+          "price": 100
+        },
+        {
+            "name": "plates_name_6",
+            "description": "Tradicional, Vainilla, Verde, Manzana Canela",
+            "price": 100
+        },
+        {
+            "name": "plates_name_7",
+            "description": "",
+            "price": 100
+        },
+        {
+        "name": "plates_name_8",
+        "description": "",
+        "price": 100
+        },
+        {
+        "name": "plates_name_9",
+        "description": "",
+        "price": 100
+        },
+        {
+        "name": "plates_name_10",
+        "description": "Pregunta por el sabor de temporada",
+        "price": 97
+        },
+        {
+        "name": "plates_name_11",
+        "description": "Vainilla, Fresa, Chocolate",
+        "price": 100
+        },
+        {
+            "name": "plates_name_12",
+            "description": "Capuccino, Matcha, Taro, Cookies and Cream",
+            "price": 105
+        },
+        {
+            "name": "plates_name_13",
+            "description": "Pregunta por el sabor de temporada",
+            "price": 75,
+            "priceGrande": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "Barra Caliente",
+      "prettyName": "plates_name_14",
+      "description": "",
+      "plates": [
+        
+        {
+            "name": "Americano",
+            "description": "",
+            "priceChico": 55,
+            "priceGrande": 60
+        },
+        {
+            "name": "Latte",
+            "description": "",
+            "priceChico": 65,
+            "priceGrande": 75
+        },
+        {
+            "name": "Moka Latte",
+            "description": "",
+            "priceChico": 75,
+            "priceGrande": 85
+        },
+        {
+            "name": "Moka Blanco Latte",
+            "description": "",
+            "priceChico": 75,
+            "priceGrande": 85
+        },
+        {
+            "name": "Caramel Latte",
+            "description": "",
+            "priceChico": 75,
+            "priceGrande": 85
+        },
+        {
+            "name": "Vainilla Latte",
+            "description": "",
+            "priceChico": 75,
+            "priceGrande": 85
+        },
+        {
+            "name": "Matcha Latte",
+            "description": "",
+            "priceChico": 85,
+            "priceGrande": 95
+        },
+        {
+            "name": "Taro Latte",
+            "description": "",
+            "priceChico": 75,
+            "priceGrande": 85
+        },
+        {
+            "name": "Chai Latte",
+            "description": "Tradicional, Verde, Vainilla y Manzana Canela.",
+            "priceChico": 75,
+            "priceGrande": 85
+        },
+        {
+            "name": "plates_name_15",
+            "description": "description_15",
+            "priceChico": 80,
+            "priceGrande": 90
+        },
+        {
+            "name": "plates_name_16",
+            "description": "description_16",
+            "priceChico": 55,
+            "priceGrande": 65
+        },
+        {
+            "name": "plates_name_17",
+            "description": "description_17",
+            "priceChico": 65,
+            "priceGrande": 75
+        },
+        {
+            "name": "plates_name_18",
+            "description": "",
+            "priceChico": 75,
+            "priceGrande": 85
+        },
+        {
+            "name": "plates_name_19",
+            "description": "description_19",
+            "priceChico": 80,
+            "priceGrande": 90
+        },
+        {
+            "name": "plates_name_20",
+            "description": "description_20",
+            "priceChico": null,
+            "priceGrande": null,
+            "price": null
+            
+        }     
+      ]
+    },
+    {
+        "id": 3,
+        "slug": "postres",
+        "prettyName": "postres",
+        "description": "",
+        "plates": [
+          {
+            "name": "plates_name_21",
+            "description": "description_21",
+            "price": 100
+          },
+          {
+            "name": "plates_name_22",
+            "description": "description_22",
+            "price": 50
+          },
+          {
+            "name": "plates_name_23",
+            "description": "description_23",
+            "price": 50
+          },
+          {
+            "name": "plates_name_24",
+            "description": "description_24",
+            "price": 67
+          },
+          {
+            "name": "plates_name_25",
+            "description": "description_25",
+            "price": 67
+          },
+          {
+            "name": "plates_name_26",
+            "description": "description_26",
+            
+            "price": 75
+          },
+          {
+            "name": "plates_name_27",
+            "description": "description_27",
+            "price": 55
+          }
+        ]
+      },
+      
+      {
+        "id": 4,
+        "slug": "embotellados",
+        "prettyName": "embotellados",
+        "description": "",
+        "plates": [
+          {
+            "name": "plates_name_28",
+            "description": "description_28",
+            "price": 67
+          },
+          {
+            "name": "plates_name_29",
+            "description": "description_29",
+            "price": 67
+          },
+          {
+            "name": "plates_name_30",
+            "description": "description_30",
+            "price": 20
+          },
+          {
+            "name": "plates_name_31",
+            "description": "description_31",
+            "price": 60
+          },
+          {
+            "name": "plates_name_32",
+            "description": "description_32",
+            "price": 50
+          }
+        ]
+      }
+      
+    
+  ]

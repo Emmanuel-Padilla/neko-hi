@@ -1,9 +1,9 @@
 // Global variables
 export const siteLang = "en-US";
 export const siteCurrency = "USD";
-export const siteDomain = "pawstronaut.com";
+export const siteDomain = "neko-hi.com";
 export const siteName = "Neko-hi";
-export const siteSlogan = "EL MEJOR CAFÉ DE GATOS EN GUADALAJARA";
+export const siteSlogan = "";
 export const themeColor = "#FF0000";
 
 export const phone = {
@@ -17,11 +17,11 @@ export const email = {
 };
 
 export const address = {
-	street: "1234 Space Street",
-	city: "Galaxy City",
-	zip: "12345",
-	state: "Milky Way",
-	country: "Space",
+	street: "Av. La Paz 2155-D, Col. Lafayette",
+	city: "Guadalajara",
+	zip: "", // Puedes agregar el código postal si lo conoces
+	state: "Jalisco",
+	country: "Mexico",
 };
 
 export const socialMedia = {
@@ -48,11 +48,9 @@ export const socialMedia = {
 };
 
 export const hours = {
-	monday: "Closed",
-	tuesday: " 11 a.m. - 8:30 p.m.",
-	wednesday: " 11 a.m. - 8:30 p.m.",
-	thursday: " 11 a.m. - 8:30 p.m.",
-	friday: " 11 a.m. - 8:30 p.m.",
-	saturday: " 11 a.m. - 8:30 p.m.",
-	sunday: "11 a.m. - 7 p.m.",
+	Lunes: "Cerrado",
+	"Martes a Viernes": "2:00 - 9:00 p.m.",
+	Sábado: "11:00 a.m. - 9:00 p.m.",
+	Domingo: "11:00 a.m. - 9:00 p.m.",
 };
+

@@ -31,15 +31,15 @@ const { cat } = Astro.props;
 				/>
 
 				<div class="prose max-w-none">
-					<h1 class="h2 text-teal-500 mt-16" transition:name={`cat-title-${cat.id}`}>{cat.data.name}</h1>
-					<p class="leading-loose" transition:name={`cat-description-${cat.id}`}>{cat.data.description}</p>
+					<h1 class="h2 text-teal-500 mt-16" transition:name={`cat-title-${cat.id}`} data-translate={cat.data.name}>{cat.data.name}</h1>
+					<p class="leading-loose" transition:name={`cat-description-${cat.id}`} data-translate={cat.data.description}>{cat.data.description}</p>
 					<div class="not-prose">
-						<Button
+						<!-- <Button
 							href="#adoption-form"
 							color="fuchsia"
 							class:list={"button bg-gradient-to-r from-fuchsia-500 to-teal-500 text-white"}
 							>Adopt me now!</Button
-						>
+						> -->
 					</div>
 				</div>
 			</div>
@@ -50,77 +50,77 @@ const { cat } = Astro.props;
 		<Container>
 			<div class="overflow-hidden bg-white ring ring-fuchsia-500 rounded-2xl max-w-4xl mx-auto">
 				<div class="px-4 py-8 sm:px-6">
-					<h3>Information</h3>
-					<p class="mt-4 max-w-2xl">
+					<h3 data-translate="INFORMACION">Information</h3>
+					<!-- <p class="mt-4 max-w-2xl">
 						Here you can find detailed information about our lovely cat, {cat.data.name}. This section
 						provides insights into their personality, favorite activities, and unique traits that make them
 						special. Whether you're looking to adopt or just curious, we hope you enjoy learning more about {
 							cat.data.name
 						}.
-					</p>
+					</p> -->
 				</div>
 				<div class="border-t border-gray-100">
 					<dl class="divide-y divide-gray-100">
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Name</dt>
+							<dt class="text-sm font-semibold" data-translate="NOMBRE">Name</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.name}</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Gender</dt>
+							<dt class="text-sm font-semibold" data-translate="GENERO">Gender</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.gender}</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Breed</dt>
+							<dt class="text-sm font-semibold" data-translate="RAZA">Breed</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.breed}</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Age</dt>
+							<dt class="text-sm font-semibold" data-translate="EDAD">Age</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.age}</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Date of birth</dt>
+							<dt class="text-sm font-semibold" data-translate="FECHA_NACIMIENTO">Date of birth</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">
 								{cat.data.birthDate ? new Date(cat.data.birthDate).toISOString().split("T")[0] : "N/A"}
 							</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Child friendly?</dt>
+							<dt class="text-sm font-semibold" data-translate="CHILD_FRIENDLY">Child friendly?</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">
 								{cat.data.childFriendly ? "Yes" : "No"}
 							</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Cat friendly?</dt>
+							<dt class="text-sm font-semibold" data-translate="CAT_FRIENDLY">Cat friendly?</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.catFriendly ? "Yes" : "No"}</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Dog friendly?</dt>
+							<dt class="text-sm font-semibold" data-translate="DOG_FRIENDLY">Dog friendly?</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.dogFriendly ? "Yes" : "No"}</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Outside cat?</dt>
+							<dt class="text-sm font-semibold" data-translate="OUTSIDE_CAT">Outside cat?</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.outsideCat ? "Yes" : "No"}</dd>
 						</div>
 
 						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-							<dt class="text-sm font-semibold">Sterilized?</dt>
+							<dt class="text-sm font-semibold" data-translate="STERILIZED">Sterilized?</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">{cat.data.sterilized ? "Yes" : "No"}</dd>
 						</div>
 
-						<div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+						<!-- <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
 							<dt class="text-sm font-semibold">Available for adoption since</dt>
 							<dd class="mt-1 sm:col-span-2 sm:mt-0 capitalize">
 								{new Date(cat.data.listDate).toISOString().split("T")[0]}
 							</dd>
-						</div>
+						</div> -->
 					</dl>
 				</div>
 			</div>

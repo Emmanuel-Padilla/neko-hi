@@ -93,7 +93,7 @@ const content:laguages = {
 								  id="language-toggle"
 								  class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
 									after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
-									hover:after:opacity-100 hover:after:scale-[2.5] flez justify-center w-full sm:w-max dark:text-white hover:text-gray-200`}
+									hover:after:opacity-100 hover:after:scale-[2.5] flez justify-center w-full sm:w-max  hover:text-gray-200 language-toggle`}
 								>
 								  <span class={`relative  z-10`} set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
 								</a>
@@ -137,52 +137,45 @@ const content:laguages = {
 						>
 							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
 						</svg>
-						<div class="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-bg lg:border-0 px-6 lg:px-0">
-							<a
-							  id="language-toggle"
-							  class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
-								after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
-								hover:after:opacity-100 hover:after:scale-[2.5] flez justify-center w-full sm:w-max dark:text-white hover:text-gray-200`}
-							>
-							  <span class={`relative  z-10`} set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
-							</a>
-				
-						</div>
+						
 					</button>
 				</div>
 				<div class="mt-6 flow-root">
 					<div class="-my-6 divide-y divide-gray-500/10">
+						
 						<div class="space-y-2 py-6 mt-16">
 							{
 								menuMain.map((item) => (
-									<a
-										x-on:click="open = false"
-										href={item.url}
-										class={`block py-2 text-center font-semibold text-3xl ${pathname === item.url ? "menu-item-active" : ""}`}
-									>
-										{item.name}
-									</a>
-									
+								<a
+									x-on:click="open = false"
+									href={item.url}
+									class={`block py-2 text-center font-semibold text-3xl ${pathname === item.url ? "menu-item-active" : ""}`}
+								>
+									{item.name}
+								</a>
 								))
 							}
+							
+
+							<!-- Botón de cambio de idioma en modo móvil -->
+							<div class="flex justify-center pt-6">
+								<a
+								id="language-toggle"
+								class={`px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
+									after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
+									hover:after:opacity-100 hover:after:scale-[2.5]  hover:text-gray-200 language-toggle`}
+								>
+								<span class="relative z-10" set:html={content[DEFAULT_LANGUAGE].button}>Español</span>
+								</a>
+							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
-
-<script>
-	document.addEventListener("astro:page-load", () => {
-		const headerWrapper = document.getElementById("header-wrapper")!;
-		const setHeaderHeight = () => {
-			document.documentElement.style.setProperty("--header-height", `${headerWrapper.offsetHeight}px`);
-		};
-		setHeaderHeight();
-		window.addEventListener("resize", setHeaderHeight);
-	});
-</script>
 <script>
     
 	import { setLanguage, translate } from "../js/translate";
@@ -198,27 +191,29 @@ const content:laguages = {
 	  
 	};
 	
-	const languageToggle = document.getElementById("language-toggle");
-	const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
+	const languageToggles = document.querySelectorAll(".language-toggle");
+	let buttonText
+	languageToggles.forEach((toggle) => {
+		buttonText = toggle.querySelector("span");
+	});
 	
 	const renderButton = () => {
-	  const languageToggle = document.getElementById("language-toggle");
-	//   console.log("languaje toggle",languageToggle);
-	  
-	  const buttonText = languageToggle!.querySelector("span") as HTMLElement | null;
-	  if(languageToggle){
-		languageToggle!.addEventListener("click", (event) => {
-		//   console.log("ejecutando");
-		  
-		  event.preventDefault();
-		  const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
-			console.log(currentLanguage);
-		//   console.log("click button",currentLanguage, "Idioma que debe verse en el boton en el click",content[currentLanguage].button);
-		  buttonText!.textContent = content[currentLanguage].button;
-		  setLanguage(currentLanguage);
+		const languageToggles = document.querySelectorAll(".language-toggle") ;
+
+		languageToggles.forEach((toggle) => {
+			const buttonText = toggle.querySelector("span");
+			toggle.addEventListener("click", (event) => {
+			event.preventDefault();
+			const currentLanguage = window.localStorage.getItem("languageDefault") || DEFAULT_LANGUAGE;
+
+			if (buttonText) {
+				buttonText.textContent = content[currentLanguage].button;
+			}
+
+			setLanguage(currentLanguage);
+			});
 		});
-	  }
-	}
+	};
 	renderButton()
   
 	const handleTranslate= () =>{
@@ -243,12 +238,22 @@ const content:laguages = {
 	  handleTranslate();
 	});
 	
-	
 	document.addEventListener("astro:after-swap", () => {
 	//   console.log("Dentro astro after");
 		renderButton();
 		handleTranslate();
 	})
+
+	document.addEventListener("astro:page-load", () => {
+		console.log("Dentro astro page load");
+		
+		const headerWrapper = document.getElementById("header-wrapper")!;
+		const setHeaderHeight = () => {
+			document.documentElement.style.setProperty("--header-height", `${headerWrapper.offsetHeight}px`);
+		};
+		setHeaderHeight();
+		window.addEventListener("resize", setHeaderHeight);
+	});
   
   </script>
   
@@ -267,3 +272,4 @@ const content:laguages = {
 	}, false);
   
   </script>
+  

@@ -93,6 +93,14 @@ export default {
 						"--tw-prose-pre-bg": theme("colors.gray[700]"),
 						"--tw-prose-th-borders": theme("colors.gray[700]"),
 						"--tw-prose-td-borders": theme("colors.gray[700]"),
+
+						"--tw-prose-verde-oliva": theme("colors.verde-oliva"),
+						"--tw-prose-mostaza": theme("colors.mostaza"),
+						"--tw-prose-rosa-palo": theme("colors.rosa-palo"),
+						"--tw-prose-petroleo": theme("colors.petroleo"),
+						"--tw-prose-terracota": theme("colors.terracota"),
+						"--tw-prose-beige": theme("colors.beige"),
+
 					},
 				},
 			}),

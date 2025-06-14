@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ Accordion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <div class="max-w-5xl px-4 py-20 mx-auto mt-10">
+    <!-- Title -->
+    <h1 class="text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h1>
+
+    <!-- Accordion Grid -->
+    <div class="grid gap-6 md:grid-cols-2">
+
+      <!-- Accordion Item -->
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg">
+        <input type="checkbox" id="faq1" class="peer hidden" />
+        <label for="faq1" class="flex justify-between items-center p-6 cursor-pointer peer-checked:bg-indigo-50 transition">
+          <span class="text-lg font-medium text-gray-900">What is x-data?</span>
+          <div class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
+            <svg class="w-4 h-4 text-gray-600 transition-transform duration-300 peer-checked:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </div>
+        </label>
+        <div class="px-6 pb-6 text-gray-600 text-sm max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40">
+          Declare a new Alpine component and its data for a block of div.
+        </div>
+      </div>
+
+      <!-- Accordion Item -->
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg">
+        <input type="checkbox" id="faq2" class="peer hidden" />
+        <label for="faq2" class="flex justify-between items-center p-6 cursor-pointer peer-checked:bg-indigo-50 transition">
+          <span class="text-lg font-medium text-gray-900">What is x-bind?</span>
+          <div class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
+            <svg class="w-4 h-4 text-gray-600 transition-transform duration-300 peer-checked:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </div>
+        </label>
+        <div class="px-6 pb-6 text-gray-600 text-sm max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40">
+          Dynamically set div attributes on an element.
+        </div>
+      </div>
+
+      <!-- Accordion Item -->
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg">
+        <input type="checkbox" id="faq3" class="peer hidden" />
+        <label for="faq3" class="flex justify-between items-center p-6 cursor-pointer peer-checked:bg-indigo-50 transition">
+          <span class="text-lg font-medium text-gray-900">What is $store?</span>
+          <div class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
+            <svg class="w-4 h-4 text-gray-600 transition-transform duration-300 peer-checked:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </div>
+        </label>
+        <div class="px-6 pb-6 text-gray-600 text-sm max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40">
+          Access a global store registered using Alpine.store(...).
+        </div>
+      </div>
+
+      <!-- Accordion Item -->
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg">
+        <input type="checkbox" id="faq4" class="peer hidden" />
+        <label for="faq4" class="flex justify-between items-center p-6 cursor-pointer peer-checked:bg-indigo-50 transition">
+          <span class="text-lg font-medium text-gray-900">What is x-on?</span>
+          <div class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
+            <svg class="w-4 h-4 text-gray-600 transition-transform duration-300 peer-checked:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+            </svg>
+          </div>
+        </label>
+        <div class="px-6 pb-6 text-gray-600 text-sm max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-40">
+          Listen for browser events on an element.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</div>
